@@ -1,0 +1,11 @@
+class UserSerializer < ActiveModel::Serializer
+  attributes :name, :email, :reservations
+
+  has_many :hotels
+  has_many :reservations
+
+  def name
+      object.first_name + ' ' + object.last_name
+  end
+
+end

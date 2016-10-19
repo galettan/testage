@@ -1,0 +1,4 @@
+class Reservation < ApplicationRecord
+      belongs_to :reservable, polymorphic: true
+      has_many :hotels
+end
